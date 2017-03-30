@@ -1,7 +1,22 @@
 <html>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-
 	<script>
+		window.fbAsyncInit = function() {
+		FB.init({
+			appId      : '122341731637399',
+			xfbml      : true,
+			version    : 'v2.8'
+			});
+			FB.AppEvents.logPageView();
+		};
+		
+		(function(d, s, id){
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/sdk.js";
+		fjs.parentNode.insertBefore(js, fjs);
+		} (document, 'script', 'facebook-jssdk'));
 		FB.ui({
 		  method: 'send',
 		  link: 'https://machicon.jp',

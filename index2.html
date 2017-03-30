@@ -1,46 +1,23 @@
 <html>
-	<script
-	  src="https://code.jquery.com/jquery-3.2.1.min.js"
-	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-	  crossorigin="anonymous">
-	</script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
 	<script>
-		window.fbAsyncInit = function() {
+		FB.ui({
+		  method: 'send',
+		  link: 'https://machicon.jp',
+		  app_id: '122341731637399'
+		});
+		
+<!-- 		window.fbAsyncInit = function() {
 		  FB.init({
 		    appId: '122341731637399',
 		    xfbml: true,
 		    version: 'v2.5'
 		  });
-		};
-		
-		(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) {
-		    return;
-		  }
-		  js = d.createElement(s);
-		  js.id = id;
-		  js.src = "//connect.facebook.net/en_US/sdk.js";
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
+		}; -->
 
-		$("#send").click(function() {
-		  FB.ui({
-		    method: 'send',
-		    href: 'https://funayoseyoshito.github.io/index2.html'
-		  }, function(response) {
-		    $("#response").html(response);
-		  });
-		});
 	</script>
 	<body>
-		<div id="send" class="messenger-share">
-		  SEND TO FACEBOOK
-		</div>
-		<br/>
-		<h2>
-		Response:
-		</h2>
-		<div id="response">
+		<h1>テスト</h1>
 	</body>
 </html>

@@ -11,7 +11,6 @@
 		    cookie : true,
 		    xfbml  : true  
 		});
-		
 		function sendMessage(){
 		      FB.ui(
 			      { 
@@ -19,7 +18,7 @@
 			          link: "https://machicon.jp"
 			      }, 
 			      function(param){
-			        //callback
+			        console.log(param)
 			      }
 		      );
 		}

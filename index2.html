@@ -1,4 +1,9 @@
 <html>
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous">
+	</script>
 	<script>
 		window.fbAsyncInit = function() {
 		  FB.init({
@@ -18,41 +23,24 @@
 		  js.src = "//connect.facebook.net/en_US/sdk.js";
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
-		
-		
+
 		$("#send").click(function() {
 		  FB.ui({
 		    method: 'send',
-		    href: 'https://funayoseyoshito.github.io/index2.html' //REPLACE THIS WITH A VALID URL FROM YOUR SITE OR USE PHP TO POPULATE IT
+		    href: 'https://funayoseyoshito.github.io/index2.html'
 		  }, function(response) {
 		    $("#response").html(response);
 		  });
 		});
 	</script>
 	<body>
-
 		<div id="send" class="messenger-share">
 		  SEND TO FACEBOOK
 		</div>
 		<br/>
-		<br/>
-
 		<h2>
 		Response:
 		</h2>
 		<div id="response">
-		
-		<div id="fb-root"></div>
-		<script src="https://connect.facebook.net/en_US/all.js"></script>
-		<script>
-		  FB.init({
-		    method: 'send',
-		    appId  : '122341731637399',
-		    status : true, // check login status
-		    cookie : true, // enable cookies to allow the server to access the session
-		    xfbml  : true  // parse XFBML
-		  });
-		</script>
-		<fb:like href="https://funayoseyoshito.github.io/index2.html" send="true" width="450" show_faces="false" font="">テストテスト</fb:like>
 	</body>
 </html>

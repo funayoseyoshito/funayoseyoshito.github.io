@@ -1,5 +1,18 @@
+<!DOCTYPE html>
 <html>
-	<body>
-		<h1>test2</h1>
-	</body>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<script src='https://statics.teams.microsoft.com/sdk/v1.0/js/MicrosoftTeams.min.js'></script>
+
+<script type="text/javascript">  
+microsoftTeams.initialize();
+microsoftTeams.getContext(function(context) {
+    console.log(context);
+})
+</script>
+
+こちらは設定画面のウェブサイトです。
+</body>
 </html>

@@ -1,7 +1,14 @@
 <html>
-	<head><meta charset="UTF-8"></head>
-	<body>
-		<a href="https://docs.google.com/presentation/d/1ZDY1u8AMcIP1ruPndcKvUZSa0JeGAo1c4jPut-VfdoM/edit?usp=sharing">テックリンク資料です。</a>
-		<a href="https://docs.google.com/presentation/d/1Vaadhrf1pUzsniC3fb0-Wn40Wb8QlrvLlVt482Sy6t4/edit?usp=sharing">テックリンク資料です。2</a>
-	</body>
+    <body>
+        <script>
+            console.log('OK');
+            document.cookie.split(";").forEach(function(cookie) {
+                var date = new Date();
+                date.setDate(date.getDate() - 1);
+                console.log(cookie);
+                // document.cookie = cookie.trim().replace(/=.*/, "=;expires=" + date.toUTCString() + "/");
+            });
+        </script>
+        <h1>test</h1>
+    </body>
 </html>

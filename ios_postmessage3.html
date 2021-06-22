@@ -5,18 +5,11 @@
 </head>
 <body>
   <script type="text/javascript">
-//     function pullToNaitiveApp() {
-//       window.webkit.messageHandlers.pullToNaitiveApp.postMessage("pullToNaitiveApp postmessage引数");
-//     }
     window.receiveFcmToken = function(token) {
       document.body.insertAdjacentHTML('afterend','<p>' + token +'</p>');
     }
-//     function receiveFromNaitiveApp(message) {
-//       document.body.insertAdjacentHTML('afterend','<p>' + message +'</p>');
-//     }
   </script>
   <p onclick="window.webkit.messageHandlers.getFcmToken.postMessage('test')">getFcmToken</p>
   <p onclick="window.webkit.messageHandlers.decrementBadge.postMessage('test')">decrementBadge</p>
-<!--   <p id="pull-to-naitive-app" onclick="pullToNaitiveApp()">pullToNaitiveApp</p> -->
 </body>
 </html>

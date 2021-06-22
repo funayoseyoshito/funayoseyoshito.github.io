@@ -4,9 +4,15 @@
 <meta charset="utf-8">
 </head>
 <body>
-  <script type="text/javascript">  
-    alert(window.webkit.messageHandlers.jsEventHandler.postMessage("ほげほげほほげほげ"));
+  <script type="text/javascript">
+    function getFcmToken() {
+      window.webkit.messageHandlers.getFcmToken.postMessage("getFcmToken postmessage引数");
+    }
+    function decrementBadge() {
+      window.webkit.messageHandlers.decrementBadge.postMessage("decrementBadge postmessage引数");
+    }
   </script>
-  <h1>hello world</h1>
+  <p onclick="getFcmToken()">getFcmToken</p>
+  <p onclick="decrementBadge()">decrementBadge</p>
 </body>
 </html>

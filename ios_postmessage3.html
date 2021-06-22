@@ -16,11 +16,12 @@
       window.webkit.messageHandlers.pullToNaitiveApp.postMessage("pullToNaitiveApp postmessage引数");
     }
     function receiveFromNaitiveApp(message) {
-      alert(message);
+      var element = document.getElementById('pull-to-naitive-app');
+      element.insertAdjacentHTML('afterend','<p>' + message +'</p>');
     }
   </script>
   <p onclick="getFcmToken()">getFcmToken</p>
   <p onclick="decrementBadge()">decrementBadge</p>
-  <p onclick="pullToNaitiveApp()">pullToNaitiveApp</p>
+  <p id="pull-to-naitive-app" onclick="pullToNaitiveApp()">pullToNaitiveApp</p>
 </body>
 </html>

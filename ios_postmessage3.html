@@ -12,6 +12,7 @@
       window.webkit.messageHandlers.decrementBadge.postMessage("decrementBadge postmessage引数");
     }
     function pullToNaitiveApp() {
+      alert('start pull to native app');
       window.webkit.messageHandlers.pullToNaitiveApp.postMessage("pullToNaitiveApp postmessage引数");
     }
     function receiveFromNaitiveApp(message) {

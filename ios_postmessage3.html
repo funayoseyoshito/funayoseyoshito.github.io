@@ -5,22 +5,18 @@
 </head>
 <body>
   <script type="text/javascript">
-    function getFcmToken() {
-      window.webkit.messageHandlers.getFcmToken.postMessage("getFcmToken postmessage引数");
+//     function pullToNaitiveApp() {
+//       window.webkit.messageHandlers.pullToNaitiveApp.postMessage("pullToNaitiveApp postmessage引数");
+//     }
+    window.receiveFcmToken = function(token) {
+      document.body.insertAdjacentHTML('afterend','<p>' + token +'</p>');
     }
-    function decrementBadge() {
-      window.webkit.messageHandlers.decrementBadge.postMessage("decrementBadge postmessage引数");
-    }
-    function pullToNaitiveApp() {
-      window.webkit.messageHandlers.pullToNaitiveApp.postMessage("pullToNaitiveApp postmessage引数");
-    }
-    function receiveFromNaitiveApp(message) {
-      var element = document.getElementById('pull-to-naitive-app');
-      element.insertAdjacentHTML('afterend','<p>' + message +'</p>');
-    }
+//     function receiveFromNaitiveApp(message) {
+//       document.body.insertAdjacentHTML('afterend','<p>' + message +'</p>');
+//     }
   </script>
-  <p onclick="getFcmToken()">getFcmToken</p>
-  <p onclick="decrementBadge()">decrementBadge</p>
-  <p id="pull-to-naitive-app" onclick="pullToNaitiveApp()">pullToNaitiveApp</p>
+  <p onclick="window.webkit.messageHandlers.getFcmToken.postMessage("");">getFcmToken</p>
+  <p onclick="window.webkit.messageHandlers.decrementBadge.postMessage("");">decrementBadge</p>
+<!--   <p id="pull-to-naitive-app" onclick="pullToNaitiveApp()">pullToNaitiveApp</p> -->
 </body>
 </html>

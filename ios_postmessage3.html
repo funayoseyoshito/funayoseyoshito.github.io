@@ -11,8 +11,15 @@
     function decrementBadge() {
       window.webkit.messageHandlers.decrementBadge.postMessage("decrementBadge postmessage引数");
     }
+    function pullToNaitiveApp() {
+      window.webkit.messageHandlers.pullToNaitiveApp.postMessage("pullToNaitiveApp postmessage引数");
+    }
+    function receiveFromNaitiveApp(message) {
+      alert(message);
+    }
   </script>
   <p onclick="getFcmToken()">getFcmToken</p>
   <p onclick="decrementBadge()">decrementBadge</p>
+  <p onclick="pullToNaitiveApp()">pullToNaitiveApp</p>
 </body>
 </html>

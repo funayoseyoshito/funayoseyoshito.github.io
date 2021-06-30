@@ -8,6 +8,9 @@
     window.receiveFcmToken = function(token) {
       document.body.insertAdjacentHTML('afterend','<p>' + token +'</p>');
     }
+    function test() {
+      document.body.insertAdjacentHTML('afterend','<p>テスト</p>');
+    }
   </script>
   <p onclick="Android.getFcmToken('test')">getFcmToken</p>
   <p onclick="Android.updateBadge('20')">updateBadge 20</p>

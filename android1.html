@@ -9,7 +9,7 @@
       document.body.insertAdjacentHTML('afterend','<p>' + token +'</p>');
     }
     window.receivePushNotification() = function(data) {
-      document.body.insertAdjacentHTML('afterend', data);
+      document.body.insertAdjacentHTML('afterend','<p>' + data +'</p>');
     }
   </script>
   <p onclick="Android.getFcmToken('test')">getFcmToken</p>

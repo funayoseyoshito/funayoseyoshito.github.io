@@ -5,6 +5,9 @@
 </head>
 <body>
   <script type="text/javascript">
+    window.receivePushNotification = function(token) {
+      document.body.insertAdjacentHTML('afterend','<p>' + token +'</p>');
+    }
     window.receiveFcmToken = function(token) {
       document.body.insertAdjacentHTML('afterend','<p>' + token +'</p>');
     }

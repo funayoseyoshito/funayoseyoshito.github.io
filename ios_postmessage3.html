@@ -5,19 +5,22 @@
 </head>
 <body>
   <script type="text/javascript">
-    window.receivePushNotification = function(token) {
-      document.body.insertAdjacentHTML('afterend','<p>' + token +'</p>');
-    }
-    window.receiveFcmToken = function(token) {
-      document.body.insertAdjacentHTML('afterend','<p>' + token +'</p>');
-    }
-    setLocalStorage() {
+    function setLocalStorage() {
       const date = new Date();
       const now = `${date.getMonth()+1}/${date.getDate()} ${date.getHours()}:${date.getMinutes()}`;
       localStorage.setItem('now', now);
     }
-    getLocalStorage() {
+
+    function getLocalStorage() {
       document.body.insertAdjacentHTML('afterend','<p>' + localStorage.getItem('now') +'</p>');
+    }
+
+    window.receivePushNotification = function(token) {
+      document.body.insertAdjacentHTML('afterend','<p>' + token +'</p>');
+    }
+
+    window.receiveFcmToken = function(token) {
+      document.body.insertAdjacentHTML('afterend','<p>' + token +'</p>');
     }
   </script>
   <p onclick="window.webkit.messageHandlers.getFcmToken.postMessage('test')">getFcmToken</p>

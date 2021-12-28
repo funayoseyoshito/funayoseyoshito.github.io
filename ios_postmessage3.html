@@ -11,9 +11,19 @@
     window.receiveFcmToken = function(token) {
       document.body.insertAdjacentHTML('afterend','<p>' + token +'</p>');
     }
+    setLocalStorage() {
+      const date = new Date();
+      const now = `${date.getMonth()+1}/${date.getDate()} ${date.getHours()}:${date.getMinutes()}`;
+      localStorage.setItem('now', now);
+    }
+    getLocalStorage() {
+      document.body.insertAdjacentHTML('afterend','<p>' + localStorage.getItem('now') +'</p>');
+    }
   </script>
   <p onclick="window.webkit.messageHandlers.getFcmToken.postMessage('test')">getFcmToken</p>
   <p onclick="window.webkit.messageHandlers.updateBadge.postMessage('20')">updateBadge 20</p>
   <p onclick="window.webkit.messageHandlers.updateBadge.postMessage('1')">updateBadge 1</p>
+  <p onclick="setLocalStorage()">setLocalStorage</p>
+  <p onclick="getLocalStorage()">getLocalStorage</p>
 </body>
 </html>

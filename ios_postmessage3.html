@@ -7,7 +7,7 @@
   <script type="text/javascript">
     function setLocalStorage() {
       const date = new Date();
-      const now = `${date.getMonth()+1}/${date.getDate()} ${date.getHours()}:${date.getMinutes()}`;
+      const now = `${date.getMonth()+1}/${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
       localStorage.setItem('now', now);
     }
 

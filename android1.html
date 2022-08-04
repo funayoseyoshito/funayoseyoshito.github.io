@@ -20,8 +20,12 @@
   </script>
   <p onclick="Android.getFcmToken('test')">getFcmToken</p>
   <p onclick="Android.updateBadge('20')">updateBadge 20</p>
-  <p onclick="open1()">Open1</p>
-  <p onclick="open2()">Open2</p>
+  <a href="about:blank" target="concierge_pdf_viewer" @click.prevent.stop="onClickFileName(resultItemView.resultItem)">{{ resultItemView.resultItem.fileName }}</a>
+  <br>
+  <a data-v-32f10e78="" href="about:blank" onclick="open1()" target="concierge_pdf_viewer">相対パス</a>
+  <br>
+  <a data-v-32f10e78="" href="about:blank" onclick="open2()" target="concierge_pdf_viewer">絶対パス</a>
+
 <!--   <br><a id="ele" href="about:blank">ele</a>
   <br><a id="ele2" href="about:blank">ele2</a> -->
 <!--   <script type="text/javascript">
